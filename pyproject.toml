@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "agent-orchestra"
+version = "0.1.0"
+description = "Multi-agent orchestration system for building, validating, and marketing SaaS products"
+authors = ["ALPHA0008"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langgraph = "^0.4"
+langchain-core = "^0.3"
+langchain-google-genai = "^2.1"
+langchain-openai = "^0.3"
+fastapi = "^0.115"
+uvicorn = {extras = ["standard"], version = "^0.34"}
+streamlit = "^1.41"
+pydantic = "^2.10"
+pydantic-settings = "^2.7"
+python-dotenv = "^1.0"
+duckduckgo-search = "^7.0"
+beautifulsoup4 = "^4.12"
+httpx = "^0.28"
+requests = "^2.32"
+sse-starlette = "^2.2"
+pyyaml = "^6.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9"
+pytest = "^8.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]
